@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PandaLogo from '../components/PandaLogo.astro';
+---
+<BaseLayout title="Intotrip — Китай без тура и паники" description="Поисковая витрина маршрутов, билетов, отелей и чеклистов для первой поездки в Китай." canonical="https://intotrip.ru/">
+  <section class="agg-hero">
+    <div class="agg-copy">
+      <div class="mini-brand"><PandaLogo small={true} /><span>Китай с первого раза</span></div>
+      <h1>Собери первую поездку в Китай без тура.</h1>
+      <p>Маршрут, билеты, отель, связь, оплата и чеклист — в одном спокойном сценарии. Панда ведёт, турист не паникует.</p>
+    </div>
+
+    <section class="booking-widget" aria-label="Собрать поездку">
+      <div class="widget-tabs">
+        <button class="active">Маршрут</button>
+        <button>Билеты</button>
+        <button>Отели</button>
+      </div>
+      <div class="booking-row">
+        <a class="field big" href="/china/">
+          <span>Направление</span>
+          <strong>Китай</strong>
+          <small>Пекин · Шанхай · Ханчжоу</small>
+        </a>
+        <a class="field" href="/china/first-time/">
+          <span>Формат</span>
+          <strong>Первый раз</strong>
+          <small>без тура</small>
+        </a>
+        <a class="field" href="/china/routes/beijing-shanghai-5-days/">
+          <span>Дни</span>
+          <strong>5–8</strong>
+          <small>мягкий темп</small>
+        </a>
+        <a class="primary-search" href="/china/">Найти план</a>
+      </div>
+      <div class="widget-note">
+        <span>Не агрегируем всё подряд.</span>
+        <span>Собираем безопасный первый маршрут и правильные клики.</span>
+      </div>
+    </section>
+  </section>
+
+  <section class="clean-grid">
+    <a class="clean-card" href="/china/first-time/">
+      <span class="card-num">01</span>
+      <h2>Первый раз</h2>
+      <p>Что проверить до покупки билета: въезд, деньги, связь, район отеля.</p>
+    </a>
+    <a class="clean-card" href="/china/family/">
+      <span class="card-num">02</span>
+      <h2>С детьми</h2>
+      <p>Не геройский маршрут, а семейный темп: еда, метро, медицина, запасные сценарии.</p>
+    </a>
+    <a class="clean-card" href="/china/checklists/first-trip/">
+      <span class="card-num">03</span>
+      <h2>Чеклист</h2>
+      <p>До вылета: приложения, страховка, оплата, адрес отеля на китайском.</p>
+    </a>
+  </section>
+
+  <section class="panda-strip">
+    <PandaLogo />
+    <div>
+      <p class="kicker">Brand hook</p>
+      <h2>Панда — не украшение. Это UX.</h2>
+      <p>Она должна быть фирменным «спокойным проводником»: меньше шума, больше следующего шага.</p>
+    </div>
+    <a class="ghost-link" href="/china/articles/apps-before-flight/">Что установить до вылета →</a>
+  </section>
+</BaseLayout>

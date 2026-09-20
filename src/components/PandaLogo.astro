@@ -1,0 +1,17 @@
+---
+const { small = false } = Astro.props;
+---
+<span class={small ? 'panda-logo small' : 'panda-logo'} aria-hidden="true">
+  <svg viewBox="0 0 80 80" role="img">
+    <circle class="ear" cx="21" cy="19" r="14"/>
+    <circle class="ear" cx="59" cy="19" r="14"/>
+    <circle class="face" cx="40" cy="42" r="31"/>
+    <ellipse class="patch" cx="29" cy="38" rx="10" ry="13" transform="rotate(-22 29 38)"/>
+    <ellipse class="patch" cx="51" cy="38" rx="10" ry="13" transform="rotate(22 51 38)"/>
+    <circle class="eye" cx="31" cy="38" r="3"/>
+    <circle class="eye" cx="49" cy="38" r="3"/>
+    <path class="nose" d="M35 50c2-4 8-4 10 0-1.5 3-8.5 3-10 0Z"/>
+    <path class="smile" d="M40 53c-3 5-8 6-12 3M40 53c3 5 8 6 12 3"/>
+    <path class="leaf" d="M52 16c8-8 15-8 20-3-6 2-10 6-12 13-3-2-6-5-8-10Z"/>
+  </svg>
+</span>

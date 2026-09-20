@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PandaLogo from '../../components/PandaLogo.astro';
+---
+<BaseLayout title="Китай с первого раза — Intotrip" description="Маршруты, чеклисты и подборки для первой самостоятельной поездки в Китай." canonical="https://intotrip.ru/china/">
+  <section class="destination-shell">
+    <div class="destination-copy">
+      <div class="mini-brand light"><PandaLogo small={true} /><span>Intotrip China</span></div>
+      <h1>Китай с первого раза: план вместо хаоса.</h1>
+      <p>Для тех, кто хочет ехать самостоятельно, но не хочет разбираться с оплатой, приложениями, отелями и маршрутами уже после посадки.</p>
+    </div>
+    <aside class="route-ticket">
+      <div class="ticket-head"><span>Готовый старт</span><strong>Пекин + Шанхай</strong></div>
+      <div class="ticket-line"><span>Темп</span><b>5 дней · без беготни</b></div>
+      <div class="ticket-line"><span>Подготовка</span><b>оплата · eSIM · отель</b></div>
+      <a class="primary-search" href="/china/routes/beijing-shanghai-5-days/">Открыть маршрут</a>
+    </aside>
+  </section>
+
+  <section class="action-list">
+    <a href="/china/first-time/"><b>Первый раз в Китай</b><span>инструкция до билетов</span></a>
+    <a href="/china/checklists/first-trip/"><b>Чеклист</b><span>до вылета</span></a>
+    <a href="/china/articles/how-to-pay/"><b>Оплата</b><span>деньги и резервный сценарий</span></a>
+    <a href="/china/family/"><b>С детьми</b><span>семейный темп</span></a>
+  </section>
+
+  <section class="content-board">
+    <div class="board-main">
+      <p class="kicker">Что проверяем в MVP</p>
+      <h2>Не «статьи про Китай», а точки конверсии.</h2>
+      <p>Каждый материал должен вести к одному из affiliate-действий: билеты, отели, страховка, экскурсия, связь.</p>
+    </div>
+    <div class="board-links">
+      <a href="/china/articles/apps-before-flight/">Приложения до вылета</a>
+      <a href="/china/articles/where-to-stay/">Где жить первый раз</a>
+      <a href="/china/articles/china-cheaper-than-turkey/">Китай или Турция</a>
+      <a href="/china/articles/visa-rules/">Правила въезда</a>
+    </div>
+  </section>
+</BaseLayout>

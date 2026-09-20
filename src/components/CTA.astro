@@ -1,0 +1,14 @@
+---
+const { title = 'Соберите поездку без лишнего риска', text = 'Пока ссылки-заглушки. После подключения Travelpayouts сюда встанут UTM/subID-ссылки.', variant = 'primary' } = Astro.props;
+---
+<section class={`cta cta-${variant}`}>
+  <div>
+    <p class="eyebrow">Следующий шаг</p>
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="cta-actions">
+    <a class="button" href="/china/checklists/first-trip/">Скачать чеклист</a>
+    <a class="button secondary" href="/china/routes/beijing-shanghai-5-days/">Посмотреть маршрут</a>
+  </div>
+</section>

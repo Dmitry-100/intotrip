@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import PandaLogo from '../components/PandaLogo.astro';
+const { title = 'Intotrip', description = 'Готовые маршруты и чеклисты для самостоятельных поездок.', canonical = 'https://intotrip.ru/' } = Astro.props;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" />
+    <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
+      (function () {
+          var script = document.createElement("script");
+          script.async = 1;
+          script.setAttribute("data-cmp-ab","2");
+          script.src = 'https://tpembars.com/NTc1OTUy.js?t=575952';
+          document.head.appendChild(script);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Intotrip home">
+        <PandaLogo small={true} />
+        <span class="brand-word">into<span>trip</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Главное меню">
+        <a href="/china/">Китай</a>
+        <a href="/china/checklists/first-trip/">Чеклист</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="/"><PandaLogo small={true} /><span class="brand-word">into<span>trip</span></span></a>
+        <p>Готовые маршруты и чеклисты без туристической воды.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/china/">Китай</a>
+        <a href="/china/checklists/first-trip/">Чеклист</a>
+        <a href="/china/articles/how-to-pay/">Оплата</a>
+      </div>
+    </footer>
+  </body>
+</html>
