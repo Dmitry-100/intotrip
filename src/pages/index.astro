@@ -2,70 +2,74 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PandaLogo from '../components/PandaLogo.astro';
 ---
-<BaseLayout title="Intotrip — Китай без тура и паники" description="Поисковая витрина маршрутов, билетов, отелей и чеклистов для первой поездки в Китай." canonical="https://intotrip.ru/">
-  <section class="agg-hero">
-    <div class="agg-copy">
-      <div class="mini-brand"><PandaLogo small={true} /><span>Китай с первого раза</span></div>
-      <h1>Собери первую поездку в Китай без тура.</h1>
-      <p>Маршрут, билеты, отель, связь, оплата и чеклист — в одном спокойном сценарии. Панда ведёт, турист не паникует.</p>
+<BaseLayout title="Intotrip — спланировать поездку в Китай" description="Авиабилеты, отели, маршруты, связь, чек-листы и travel-хаки для самостоятельной поездки в Китай." canonical="https://intotrip.ru/">
+  <section class="v3-hero">
+    <div class="v3-hero-copy">
+      <div class="v3-kicker"><PandaLogo small={true} /> Китай без тура и паники</div>
+      <h1>Спланируйте поездку в Китай грамотно.</h1>
+      <p>Билеты, отели, связь, оплата, готовые маршруты и чек-листы — всё, что нужно до вылета, без туристической воды.</p>
     </div>
 
-    <section class="booking-widget" aria-label="Собрать поездку">
-      <div class="widget-tabs">
-        <button class="active">Маршрут</button>
-        <button>Билеты</button>
+    <section class="tp-search" aria-label="Поиск авиабилетов и отелей">
+      <div class="tp-tabs">
+        <button class="active">Авиабилеты</button>
         <button>Отели</button>
       </div>
-      <div class="booking-row">
-        <a class="field big" href="/china/">
-          <span>Направление</span>
-          <strong>Китай</strong>
-          <small>Пекин · Шанхай · Ханчжоу</small>
-        </a>
-        <a class="field" href="/china/first-time/">
-          <span>Формат</span>
-          <strong>Первый раз</strong>
-          <small>без тура</small>
-        </a>
-        <a class="field" href="/china/routes/beijing-shanghai-5-days/">
-          <span>Дни</span>
-          <strong>5–8</strong>
-          <small>мягкий темп</small>
-        </a>
-        <a class="primary-search" href="/china/">Найти план</a>
-      </div>
-      <div class="widget-note">
-        <span>Не агрегируем всё подряд.</span>
-        <span>Собираем безопасный первый маршрут и правильные клики.</span>
-      </div>
+      <div class="tp-note">Здесь будет официальная форма Travelpayouts / Aviasales «Flights + Hotels». Пока — каркас под виджет и Drive-аналитику.</div>
+      <form class="search-shell" action="/china/" method="get">
+        <label><span>Откуда</span><input name="from" value="Москва" /></label>
+        <label><span>Куда</span><input name="to" value="Шанхай" /></label>
+        <label><span>Даты</span><input name="dates" value="5–7 дней" /></label>
+        <button type="submit">Найти поездку</button>
+      </form>
     </section>
   </section>
 
-  <section class="clean-grid">
-    <a class="clean-card" href="/china/first-time/">
-      <span class="card-num">01</span>
-      <h2>Первый раз</h2>
-      <p>Что проверить до покупки билета: въезд, деньги, связь, район отеля.</p>
-    </a>
-    <a class="clean-card" href="/china/family/">
-      <span class="card-num">02</span>
-      <h2>С детьми</h2>
-      <p>Не геройский маршрут, а семейный темп: еда, метро, медицина, запасные сценарии.</p>
-    </a>
-    <a class="clean-card" href="/china/checklists/first-trip/">
-      <span class="card-num">03</span>
-      <h2>Чеклист</h2>
-      <p>До вылета: приложения, страховка, оплата, адрес отеля на китайском.</p>
-    </a>
+  <section class="v3-strip">
+    <a href="/china/articles/apps-before-flight/"><b>Связь в Китае</b><span>роуминг, eSIM, VPN, МТС и рабочие сценарии</span></a>
+    <a href="/china/routes/beijing-shanghai-5-days/"><b>Готовые маршруты</b><span>Пекин, Шанхай, Ханчжоу: по дням и без перегруза</span></a>
+    <a href="/china/checklists/first-trip/"><b>Чек-лист до вылета</b><span>приложения, документы, оплата, страховка</span></a>
   </section>
 
-  <section class="panda-strip">
-    <PandaLogo />
-    <div>
-      <p class="kicker">Brand hook</p>
-      <h2>Панда — не украшение. Это UX.</h2>
-      <p>Она должна быть фирменным «спокойным проводником»: меньше шума, больше следующего шага.</p>
+  <section class="v3-section">
+    <div class="v3-section-head">
+      <h2>Популярные идеи поездки</h2>
+      <p>Эти блоки будем наполнять статьями, маршрутами, партнёрскими ссылками и тестировать рекламой отдельно.</p>
     </div>
-    <a class="ghost-link" href="/china/articles/apps-before-flight/">Что установить до вылета →</a>
+    <div class="trip-grid">
+      <a class="trip-card hot" href="/china/routes/beijing-shanghai-5-days/">
+        <span>Маршрут</span>
+        <h3>Шанхай на 5 дней за 100 тыс. ₽</h3>
+        <p>Завлекающий бюджетный сценарий: перелёт, район отеля, связь, первые 24 часа.</p>
+      </a>
+      <a class="trip-card" href="/china/first-time/">
+        <span>Новичкам</span>
+        <h3>Первый раз в Китай самостоятельно</h3>
+        <p>Как не утонуть в оплате, приложениях, транспорте и китайских адресах.</p>
+      </a>
+      <a class="trip-card" href="/china/family/">
+        <span>Семья</span>
+        <h3>Китай с детьми без героизма</h3>
+        <p>Темп, отель, еда, медицина и маршруты, где дети не проклянут поездку.</p>
+      </a>
+      <a class="trip-card" href="/china/articles/where-to-stay/">
+        <span>Отели</span>
+        <h3>Где жить в Пекине и Шанхае</h3>
+        <p>Районы для первого раза: ближе к метро, еде и главным точкам.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="v3-section monetization">
+    <div>
+      <h2>Что подготовить до вылета</h2>
+      <p>Главная коммерческая зона MVP: связь, страховка, отели, билеты, экскурсии и travel-book.</p>
+    </div>
+    <div class="money-list">
+      <a href="/china/articles/apps-before-flight/"><b>1. Связь и интернет</b><span>МТС/роуминг, eSIM, VPN, что проверить до посадки</span></a>
+      <a href="/china/articles/how-to-pay/"><b>2. Оплата</b><span>Alipay, WeChat, наличные, резервный сценарий</span></a>
+      <a href="/china/checklists/first-trip/"><b>3. Чек-лист</b><span>PDF/travel-book later: всё перед вылетом в одном файле</span></a>
+      <a href="/china/articles/china-cheaper-than-turkey/"><b>4. Пакетные туры / сравнение</b><span>Куда выгоднее, где проще, где больше риска</span></a>
+    </div>
   </section>
 </BaseLayout>
